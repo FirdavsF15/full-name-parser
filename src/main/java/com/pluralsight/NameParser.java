@@ -12,13 +12,14 @@ public class NameParser {
 
         String[] nameParts = fullName.split(" ");
 
-        String firstName, middleName = "none", lastName;
+        String firstName, middleName = "none", lastName="";
 
         firstName = nameParts[0];
-        if(nameParts[1].length() <=2){
+        if(nameParts.length == 3){
             middleName = nameParts[1];
             lastName = nameParts[2];
-        }else{
+        }
+        if(nameParts.length == 2){
             lastName = nameParts[1];
         }
 
